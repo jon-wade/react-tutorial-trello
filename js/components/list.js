@@ -14,8 +14,8 @@ let List = function(props) {
     return (
         <div className="card-list">
             <h2>{props.title}</h2>
-            {props.cards.map(function(card) {
-                return <Card text={card} />
+            {props.cards.map(function(card, i) {
+                return <Card key={i} text={card} />
             })}
             <form onSubmit={handleSubmit}>
                 <input type="text" onChange={props.onAddInputChanged}/>
